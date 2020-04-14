@@ -1,1 +1,5 @@
 /node_modules
+/temp/uploads/*.jpg
+/temp/uploads/*.png
+/temp/uploads/*.jpeg
+/temp/uploads/*.gif
