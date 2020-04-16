@@ -3,3 +3,4 @@
 /temp/uploads/*.png
 /temp/uploads/*.jpeg
 /temp/uploads/*.gif
+.env

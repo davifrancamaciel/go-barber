@@ -6,7 +6,6 @@ import databaseConfig from '../config/database'
 import User from '../app/models/User'
 import File from '../app/models/File'
 import Appointment from '../app/models/Appointment'
-import { MONGODB_URL } from '../consts'
 
 const models = [User, File, Appointment]
 
@@ -28,7 +27,7 @@ class Database {
     }
 
     mongo () {
-        this.mongooseConnection = mongoose.connect(MONGODB_URL, {
+        this.mongooseConnection = mongoose.connect(process.env.MONGO_URL, {
             useNewUrlParser: true,
             useFindAndModify: true,
             useUnifiedTopology: true
