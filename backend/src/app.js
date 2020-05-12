@@ -3,6 +3,7 @@ import express from 'express'
 import * as Sentry from '@sentry/node'
 import Youch from 'youch'
 import path from 'path'
+import cors from 'cors'
 import 'express-async-errors'
 import routes from './routes'
 
@@ -22,6 +23,7 @@ class App {
     middlewares () {
         // The request handler must be the first middleware on the app
         this.server.use(Sentry.Handlers.requestHandler())
+        this.server.use(cors())
         this.server.use(express.json())
         // uso de rescursos staticos do servidor para o acesso get de css, imagens ...
         this.server.use(
