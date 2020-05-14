@@ -1,9 +1,10 @@
 import React from 'react';
-
-// import { Container } from './styles';
+import api from '~/services/api'
+// import { Wrapper } from './styles';
 
 function Dashboard() {
     // console.tron('dash')
+    api.get('appointments')
   return <h1>Dashboard</h1>;
 }
 
