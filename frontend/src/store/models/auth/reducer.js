@@ -4,7 +4,8 @@ import {
   AUTH_SIGN_IN_SUCCESS,
   AUTH_SIGN_IN_REQUEST,
   AUTH_SIGN_UP_REQUEST,
-  AUTH_SIGN_FAILURE
+  AUTH_SIGN_FAILURE,
+  AUTH_SIGN_OUT
 } from '~/constants/Auth'
 
 export default function auth (state = INITIAL_STATE, action) {
@@ -29,6 +30,12 @@ export default function auth (state = INITIAL_STATE, action) {
 
       case AUTH_SIGN_FAILURE: {
         draft.loading = false
+        break
+      }
+
+      case AUTH_SIGN_OUT: {
+        draft.token = null
+        draft.signed = false
         break
       }
 

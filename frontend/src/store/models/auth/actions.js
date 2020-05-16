@@ -2,7 +2,8 @@ import {
   AUTH_SIGN_IN_REQUEST,
   AUTH_SIGN_IN_SUCCESS,
   AUTH_SIGN_UP_REQUEST,
-  AUTH_SIGN_FAILURE
+  AUTH_SIGN_FAILURE,
+  AUTH_SIGN_OUT
 } from '~/constants/Auth'
 
 export function signInRequest (email, password) {
@@ -29,5 +30,11 @@ export function signUpRequest (name, email, password) {
 export function signFailure () {
   return {
     type: AUTH_SIGN_FAILURE
+  }
+}
+
+export function signOut () {
+  return {
+    type: AUTH_SIGN_OUT
   }
 }
