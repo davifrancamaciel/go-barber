@@ -1,4 +1,5 @@
 import User from '../models/User'
+import File from '../models/File'
 
 import * as Yup from 'yup'
 
