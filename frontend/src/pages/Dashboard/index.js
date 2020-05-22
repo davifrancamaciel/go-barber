@@ -7,6 +7,7 @@ import {
   setHours,
   setMinutes,
   setSeconds,
+  setMilliseconds,
   isBefore,
   parseISO,
   isEqual
@@ -39,7 +40,10 @@ function Dashboard () {
       const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
 
       const data = range.map(hour => {
-        const checkDate = setSeconds(setMinutes(setHours(date, hour), 0), 0)
+        const checkDate = setMilliseconds(
+          setSeconds(setMinutes(setHours(date, hour), 0), 0),
+          0
+        )
         const compareDate = utcToZonedTime(checkDate, timezone)
         return {
           time: `${hour}:00h`,
@@ -49,8 +53,7 @@ function Dashboard () {
           )
         }
       })
-      console.log(response.data)
-      console.log(data)
+      
       setSchedules(data)
     }
     loadSchedule()

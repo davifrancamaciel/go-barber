@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   height: 100%;
   background: linear-gradient(-90deg, #7159c1, #ab59c1);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `
@@ -31,15 +32,14 @@ export const Content = styled.div`
         color: rgba(255, 255, 255, 0.7);
       }
     }
-    
-    span {
-        color: #fb6f91;
-        align-self: flex-start;
-        margin: 0 0 10px;
-        font-weight: bold;
 
+    span {
+      color: #fb6f91;
+      align-self: flex-start;
+      margin: 0 0 10px;
+      font-weight: bold;
     }
-    
+
     button {
       margin: 10px 0 0;
       height: 44px;
