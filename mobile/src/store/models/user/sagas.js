@@ -7,9 +7,9 @@ import { updateProfileFailure, updateProfileSuccess } from './actions'
 
 export function * updateProfile ({ payload }) {
   try {
-    const { name, email, avatar_id, ...rest } = payload.data
+    const { name, email, ...rest } = payload.data
     const profile = Object.assign(
-      { name, email, avatar_id },
+      { name, email },
       rest.oldPassword ? rest : {}
     )
 
