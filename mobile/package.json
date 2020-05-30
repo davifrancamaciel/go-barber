@@ -5,13 +5,13 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start",
+    "start": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint .",
     "postinstall": "jetify"
   },
   "dependencies": {
-    "@react-navigation/bottom-tabs": "^5.4.5",
+    "@react-native-community/async-storage": "^1.10.3",
     "axios": "^0.19.2",
     "immer": "^6.0.6",
     "prop-types": "^15.7.2",
@@ -19,8 +19,12 @@
     "react-native": "0.62.2",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-linear-gradient": "^2.5.6",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-safe-area-context": "^3.0.2",
+    "react-native-screens": "^2.8.0",
     "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^4.3.9",
+    "react-navigation-tabs": "^2.8.13",
     "react-redux": "^7.2.0",
     "reactotron-react-native": "^5.0.0",
     "reactotron-redux": "^3.1.3",

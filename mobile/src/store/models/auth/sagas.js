@@ -13,12 +13,12 @@ import api from '~/services/api'
 export function * signIn ({payload}) {
   try {
     const {email, password} = payload
-
+    
     const response = yield call(api.post, '/sessions', {
       email,
       password,
     })
-
+    
     const {token, user} = response.data
 
     if (user.provider) {
@@ -33,6 +33,7 @@ export function * signIn ({payload}) {
     // history.push('/dashboard')
   } catch (error) {
     Alert.alert('Falha no login', 'Usuario não encontrado.')
+    alert('Falha no login Usuario não encontrado.')
     yield put(signFailure())
   }
 }
@@ -45,13 +46,13 @@ export function * signUp ({payload}) {
       name,
       email,
       password,
-      provider: true,
     })
 
     // history.push('/')
   } catch (error) {
     if (error.error) Alert.alert('Erro no login', error.error)
-    else Alert.alert('Falha no cadastro', 'Falha no cadastro verifique seus dados')
+    else
+      Alert.alert('Falha no cadastro', 'Falha no cadastro verifique seus dados')
     yield put(signFailure())
   }
 }

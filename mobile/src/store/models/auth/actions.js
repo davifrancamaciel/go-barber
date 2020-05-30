@@ -7,6 +7,8 @@ import {
 } from '~/constants/Auth'
 
 export function signInRequest (email, password) {
+
+  
   return {
     type: AUTH_SIGN_IN_REQUEST,
     payload: { email, password }
