@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.10.3",
+    "@react-native-community/masked-view": "^0.1.10",
     "axios": "^0.19.2",
     "date-fns": "^2.0.0-beta.5",
     "immer": "^6.0.6",
@@ -25,6 +26,7 @@
     "react-native-screens": "^2.8.0",
     "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^4.3.9",
+    "react-navigation-stack": "^2.5.1",
     "react-navigation-tabs": "^2.8.13",
     "react-redux": "^7.2.0",
     "reactotron-react-native": "^5.0.0",

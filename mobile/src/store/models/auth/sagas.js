@@ -13,12 +13,12 @@ import api from '~/services/api'
 export function * signIn ({payload}) {
   try {
     const {email, password} = payload
-    
+
     const response = yield call(api.post, '/sessions', {
       email,
       password,
     })
-    
+
     const {token, user} = response.data
 
     if (user.provider) {
@@ -66,12 +66,8 @@ function setToken ({payload}) {
   }
 }
 
-function signOut () {
-  // history.push('/')
-}
 export default all([
   takeLatest('persist/REHYDRATE', setToken),
   takeLatest(AUTH_SIGN_IN_REQUEST, signIn),
   takeLatest(AUTH_SIGN_UP_REQUEST, signUp),
-  takeLatest(AUTH_SIGN_OUT, signOut),
 ])
