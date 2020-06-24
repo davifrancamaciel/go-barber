@@ -9,7 +9,7 @@ import { Container, Content, Profile } from './styles'
 
 function Header () {
   const profile = useSelector(state => state.user.profile)
-  
+  console.log(profile)
   return (
     <Container>
       <Content>
@@ -25,7 +25,7 @@ function Header () {
               <Link to='/profile'>Meu perfil</Link>
             </div>
             <img
-              src={profile.avatar.url || AVATAR_DEFAULT}
+              src={profile.avatar ? profile.avatar.url : AVATAR_DEFAULT}
               alt={profile.name}
             />
           </Profile>
