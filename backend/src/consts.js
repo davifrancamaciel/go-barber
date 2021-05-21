@@ -1,4 +1,4 @@
-const PORT = 3399
+const PORT = process.env.APP_PORT
 const BASE_URL = `http://localhost:${PORT}`
 
 module.exports = {

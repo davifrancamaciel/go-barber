@@ -3,4 +3,6 @@
 import app from './app';
 import { PORT } from './consts';
 
-app.listen(PORT);
+app.listen(PORT, () => {
+	console.log(`🎉 Backend rodando  na PORTA => 😜 ${PORT}`);
+});
